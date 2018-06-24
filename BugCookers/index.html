@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reservationBtn.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+  <script async src="https://www.jscache.com/wejs?wtype=cdsscrollingravewide&amp;uniq=62&amp;locationId=807552&amp;lang=fr&amp;border=false&amp;shadow=false&amp;backgroundColor=white&amp;display_version=2"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+  <title>Bugcookers</title>
+</head>
+
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navigation" class="navbar navbar-expand-lg">
+    <h3>BugCookers</h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <h4 style="color:white; padding: 0 10px">B</h4>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav nav nav-pills" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="a" href="#concept">Concept</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="b" href="#menucartes">Menu & Carte</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="c" href="#gallery">Galerie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="d" href="#actuAll">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#service">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="outer-menu">
+    <input class="checkbox-toggle" type="checkbox" />
+    <div class="hamburger">
+      <div><i class="far fa-calendar-alt"></i></div>
+    </div>
+    <div class="menu">
+      <div>
+        <div>
+          <section id="reservation">
+            <div class="container-fluid">
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col">
+                    <div class="row">
+                      <button class="btn btn-block" type="submit" name="button">Réserver</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="inputNameR" placeholder="Nom" pattern="^\D+$" required>
+                    <div class="valid-feedback">
+                      Tout est ok!
+                    </div>
+                    <div class="invalid-feedback">
+                      Hey, dis nous qui tu es !
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="inputPrenomR" placeholder="Prénom" pattern="^\D+$" required>
+                    <div class="valid-feedback">
+                      Tout est ok!
+                    </div>
+                    <div class="invalid-feedback">
+                      Présente toi :) !!!
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="inputMailR" placeholder="name@example.com" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                    <div class="valid-feedback">
+                      Tout est ok!
+                    </div>
+                    <div class="invalid-feedback">
+                      Adresse mail invalid
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group">
+                    <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" data-toggle="datetimepicker" required/>
+                      <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-group">
+                    <select class="custom-select" id="inputPersonne">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                            </select>
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="inputPersonne">pers</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-group">
+                    <select class="custom-select" id="inputHeure">
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                        </select>
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="inputHeure">h</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-group">
+                    <select class="custom-select" id="inputMinute">
+                                  <option>00</option>
+                                  <option>15</option>
+                                  <option>30</option>
+                                  <option>45</option>
+                              </select>
+                    <div class="input-group-append">
+                      <label class="input-group-text" for="inputMinute">min</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade border-dark" id="modalActu" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered border-dark" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLongTitle">Modal title</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="card-img-top" src="">
+          <p>...</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modalCarte" tabindex="-1" role="dialog" aria-labelledby="modalCarte" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <h2>Notre Carte</h2>
+          <img src="./pictures/separateur.png" alt="separateur">
+          <h3>Entrées</h3>
+          <p>Foie Gras sur Toasts et Vers de Bamboo</p>
+          <p>Tapas de Scorpions d'Eau</p>
+          <p>Vers de Sangou à la Betterave</p>
+          <p>Crème d'Endives aux Criquets</p>
+          <p>Oeufs Pochés, Vers de Farine et Crème de Bleu d'Auvergne</p>
+          <p>Noix de Saint-Jacques aux Vers de fourmis</p>
+
+          <h3>Plats Principaux</h3>
+          <p>Bug Burgers</p>
+          <p>Curry de Vers de Farine et son Flan de Patates Douces</p>
+          <p>Chili con Grillons</p>
+          <p>Ratatouille au Concassé de Grillons</p>
+          <p>Larves de Charençons Farcies</p>
+
+          <h3>Desserts</h3>
+          <p>Beignet de Grillons et son Sorbet Citronnelle </p>
+          <p>Mangue Trois Façons sur Lit de Termites Caramélisées</p>
+          <p>Sorbet de Grillons</p>
+          <p>Gaufres à la Farine de Criquets</p>
+          <img src="./pictures/separateur.png" alt="separateur">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalTerroir" tabindex="-1" role="dialog" aria-labelledby="modalTerroir" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <h2>Insectes du Terroir</h2>
+          <img src="./pictures/separateur.png" alt="separateur">
+          <h3>Entrée</h3>
+          <p>Crème d'endives aux Criquets</p>
+          <p>ou</p>
+          <p>Oeufs Pochés, Vers de Farine et Crème de Bleu d'Auvergne</p>
+
+          <h3>Plat principal</h3>
+          <p>Ratatouille au Concassé de Grillons</p>
+          <p>ou</p>
+          <p>Larves de Charençons Farcies</p>
+
+          <h3>Dessert</h3>
+          <p>Sorbet de Grillons</p>
+          <p>ou</p>
+          <p>Gaufres à la Farine de Criquets</p>
+          <img src="./pictures/separateur.png" alt="separateur">
+          <h3>Tarif</h3>
+          <p>65€</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalMonde" tabindex="-1" role="dialog" aria-labelledby="modalMonde" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <h2>Insectes du Monde</h2>
+          <img src="./pictures/separateur.png" alt="separateur">
+          <h3>Entrée</h3>
+          <p>Tapas de Scorpions d'Eau</p>
+          <p>ou</p>
+          <p>Vers de Sangou à la Betterave</p>
+
+
+          <h3>Plat principal</h3>
+          <p>Curry de Vers de Farine et son Flan de Patates Douces</p>
+          <p>ou</p>
+          <p>Chili con Grillons</p>
+
+          <h3>Dessert</h3>
+          <p>Beignet aux Grillons et son Sorbet Citronnelle </p>
+          <p>ou</p>
+          <p>Mangue Trois Façons sur Lit de Termites Caramélisées </p>
+          <img src="./pictures/separateur.png" alt="separateur">
+          <h3>Tarif</h3>
+          <p>75€</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAROUSEL -->
+  <section>
+    <div class="carousel">
+      <img src="./pictures/vh1.jpg" alt="">
+      <img src="./pictures/chefpreparations.jpg" alt="">
+      <img src="./pictures/vh2.jpg" alt="">
+      <img src="./pictures/image.jpeg" alt="">
+    </div>
+  </section>
+  <!-- CONCEPT -->
+  <section id="concept">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 col-10 offset-lg-3 offset-md-2 offset-1">
+          <div id="etiquette" class="row" data-aos="flip-down">
+            <div class="col">
+              <div class="row justify-content-center">
+                <h3>La Cuisine d'Aujourd'hui et de Demain</h3>
+              </div>
+              <div class="row justify-content-center">
+                <img src="./pictures/separateur.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center marginDown">
+            <h2>Notre Concept</h2>
+          </div>
+          <div class="row align-items-center marginDown">
+            <p class="conceptText" data-aos="fade-zoom-in">
+              <img src="./pictures/V3.png" alt=""> Né de l'amitié de Laetitia Varela et de Julien Boyer, notre établissement a ouvert en 2017 et s’adresse à la nouvelle génération en lui proposant une expérience gustative inédite autour des insectes !<br/>              Embarquez pour une escale culinaire créative aux saveurs uniques.<br/> Vous êtes amateurs de cuisine gastronomique, ou d'une restauration plus contemporaine, voilà un nouvel endroit où tout est cuisiné sur place, avec de vrais produits de
+              saison.<br/> Un lieu de détente et de convivialité, où chacun est accueilli dans la bonne humeur.
+            </p>
+            <p class="conceptText" data-aos="fade-zoom-in">Les insectes novateur oui et non ?<br/>La consommation d’insectes comestibles ne constitue pas une pratique nouvelle en Europe.<br/> On trouve en effet des traces de cette pratique depuis l’Antiquité. Le philosophe grec Aristote (384-322 avant
+              J.C.) faisait déjà l’éloge des nymphes de cigales en les décrivant comme ayant une saveur exquise.<br/> Les romains quant à eux se délectaient des larves de scarabées. Au 18ème siècle, on prêtait à la consommation de certains insectes des
+              vertus médicinales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CARDMENU -->
+  <section id="menucartes" class="display">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <h2>Menus et Carte</h2>
+      </div>
+      <div class="row justify-content-center marginDown">
+        <Hr></Hr>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6">
+          <div class="row justify-content-center">
+            <div class="card" data-toggle="modal" data-target="#modalTerroir">
+              <div class="card-body">
+                <img src="./pictures/Chalkboard5.png" alt="pic">
+                <h2 class=" card-title ">Insectes
+                                      <br/>du Terroir</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="row justify-content-center">
+            <div class="card" data-toggle="modal" data-target="#modalMonde">
+              <div class="card-body">
+                <img src="./pictures/Chalkboard5.png" alt="pic">
+                <h2 class="card-title ">Insectes</br> du Monde</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="row justify-content-center marginDown">
+            <div class="card" data-toggle="modal" data-target="#modalCarte">
+              <div class="card-body">
+                <img src="./pictures/Chalkboard5.png" alt="pic">
+                <h2 class="card-title" id="carte">Carte</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ACTUALITE / GALERIE -->
+  <section id="actuGallery">
+    <div id="gallery" class="container-fluid">
+      <div class="row justify-content-center marginDown">
+        <h2 class="actuGalleryTitle">Galerie</h2>
+      </div>
+      <div class="centerx marginDown">
+        <div class="box">
+          <img class="img-responsive gallery_img-modif" src="./pictures/burger.jpg">
+        </div>
+        <div class="box">
+          <img class="img-responsive gallery_img-modif" src="./pictures/cafe gourmand.jpg">
+        </div>
+        <div class="box">
+          <img class="img-responsive gallery_img-modif" src="./pictures/farci scarabe.jpg">
+        </div>
+        <div class="box">
+          <img class="img-responsive gallery_img-modif" src="./pictures/chef2.jpg">
+        </div>
+        <div class="box">
+          <img class="img-responsive gallery_img-modif" src="./pictures/ragout de grillon.jpg">
+        </div>
+        <div class="box">
+          <img class="img-responsive gallery_img-modif" src="./pictures/sorbet de grillon.jpg">
+        </div>
+        <div class="box">
+          <img class="img-responsive gallery_img-modif" src="./pictures/spagetti ver de farine.jpg">
+        </div>
+        <div class="box">
+          <img class="img-responsive gallery_img-modif" src="./pictures//worm soup.jpg">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 offset-sm-4">
+          <div class="row">
+            <div class="col-3">
+              <div class="row justify-content-center">
+                <div id="controlLeft" class="controlGallery">
+                  <i class="fas fa-chevron-left"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-3 offset-6">
+              <div class="row justify-content-center">
+                <div id="controlRight" class="controlGallery">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="actuAll" class="display">
+    <h2>Blog</h2>
+    <hr></hr>
+    <div class="container">
+      <div class="row">
+        <!--premiere card-->
+        <div class="card-actu col-lg-3 col-6">
+          <div class="row justify-content-center">
+            <div class="card border-dark">
+              <img class="card-img-top" src="./pictures/restaurant_.jpg" alt="Menu">
+              <div class="card-body">
+                <h4 class="card-title">Nouveau menu</h4>
+                <p class="card-text text-modif">Afin de célébrer l'arrivée prochaine du printemps, une nouvelle carte ...</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn-actu text-white bg-dark" data-toggle="modal" data-target="#modalActu">
+                       <i class="fas fa-eye"></i> Actualité
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--deuxieme card-->
+        <div class="card-actu col-lg-3  col-6">
+          <div class="row justify-content-center">
+            <div class="card border-dark">
+              <img class="card-img-top" src="./pictures/beignets2.jpg" alt="Beignet">
+              <div class="card-body">
+                <h4 class="card-title">Beignets de criquets</h4>
+                <p class="card-text text-modif">
+                  <span class="ingredient">
+                                          Ingrédients pour environ 20 beignets de criquets (4 personnes) :
+                                          <i>• 200 grammes de farine • 1 tasse d'eau • 1 tasse de crickets préalablement bouillis
+                                              et hachés • 1 tasse d'eau • 1 cuillère à café pâte de chili • ½ d'un gros oignon
+                                              rouge, haché finement • 1 piment rouge, tranché finement • 3 brins de ciboulette
+                                              hachée • ½ tasse de grains de maïs cuits • ¼ tasse de gingembre frais, haché finement
+                                              et sautés • ¼ tasse feuilles de coriandre fraîche finement hachées • ½ c. à thé de
+                                              sel
+                                          </i>
+                                      </span>
+                  <br/> Mélanger la farine, la pâte de chili, le sel et l'eau jusqu’à obtenir une texture lisse et épaisse. Y ajouter les oignons hachés, la ciboulette, le gingembre, le piment en tranches, le maïs et les criquets. Bien mélanger en formant
+                  des boulettes que vous roulerez dans la farine. Faire chauffer une grande casserole avec l'huile de cuisson. Lorsque l'huile est suffisamment chaude, y déposer les boulettes. Laisser frire jusqu'à obtenir une couleur brun doré (environ
+                  3-5 minutes). Transférer sur une grille de refroidissement et répéter avec le reste du mélange. Servir avec du riz et garnir de coriandre hachée avec des feuilles.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn-actu text-white bg-dark" data-toggle="modal" data-target="#modalActu">
+                        <i class="fas fa-eye"></i> Recette
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--troisieme card-->
+        <div class="card-actu col-lg-3 col-6">
+          <div class="row justify-content-center">
+            <div class="card border-dark">
+              <img class="card-img-top" src="./pictures/DSCN6456.jpg" alt="Insectes sautés">
+              <div class="card-body">
+                <h4 class="card-title">Grillons sautés</h4>
+                <p class="card-text text-modif">
+                  <span class="ingredient">
+
+                                          Ingrédients pour 4 à 6 personnes:
+                                          <i> • 1-2 tasses de Grillons • ¼ tasse de beurre • 3 gousses d'ail • ¼ tasse d'oignons verts
+                                              hachés
+                                          </i>
+                                      </span>
+                  <br/>Faire fondre le beurre, ajouter l'ail et les oignons verts hachés et faire revenir pendant quelques minutes. Ajouter les insectes et les faire revenir pendant 10 à 15 minutes supplémentaires. Assaisonner au goût. Servir chaud.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn-actu text-white bg-dark" data-toggle="modal" data-target="#modalActu">
+                        <i class="fas fa-eye"></i> Recette
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--quatrieme card-->
+        <div class="card-actu col-lg-3 col-6 ">
+          <div class="row justify-content-center">
+            <div class="card border-dark">
+              <img class="card-img-top" src="./pictures/fireworks-.jpg" alt="feux d'artifice">
+              <div class="card-body">
+                <h4 class="card-title">Déjà un an</h4>
+                <p class="card-text text-modif ">Le 16 mars 2017, nous célébrerons nos un an d'ouverture ...</p>
+
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary btn-actu text-white bg-dark" data-toggle="modal" data-target="#modalActu">
+                        <i class="fas fa-eye"></i> Actualité
+                      </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  <!-- SERVICE -->
+  <section id="service">
+    <div class="container-fluid padDown">
+      <div class="row">
+        <div class="col">
+          <div class="row justify-content-center">
+            <h2>Service</h2>
+          </div>
+          <div class="row justify-content-center">
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row justify-content-center">
+            <div class="iconBox" data-aos="fade-left">
+              <img src="./pictures/resto9.png" alt="">
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <p className="iconText"><strong>Ouvert Midi & Soir</strong><br/>Menu du jour & carte de saison</P>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row justify-content-center">
+            <div class="iconBox" data-aos="fade-up">
+              <img src="./pictures/wine.png" alt="">
+            </div class="iconBox">
+          </div>
+          <div class="row justify-content-center">
+            <p class="iconText"><strong>Privatisation & Évènements</strong><br/>Un espace modulable de 400 m²</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row justify-content-center">
+            <div class="iconBox" data-aos="fade-up">
+              <img src="./pictures/service.png" alt="">
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <p class="iconText"><strong>Parking privatif</strong><br/>Facilité d'accès & Service voiturier</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <div class="row justify-content-center">
+            <h2>Contact</h2>
+          </div>
+          <div class="row justify-content-center">
+            <img src="./pictures/separateur.png" alt="">
+          </div>
+          <div id="acces" class="row marginDown">
+            <div class="col-md-10 offset-md-1">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="row">
+                    <div id="map"></div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="row justify-content-center marginDown">
+                    <h4>Accès</h4>
+                  </div>
+                  <div class="row align-items-center">
+                    <ul>
+                      <li>Metro A</li>
+                      <li>Tramway T1 et T2</li>
+                      <li>Gare SNCF</li>
+                      <li>Proximité de Perrache</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" data-aos="fade-down">
+            <div class="col-md-6 offset-md-3">
+              <form class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="inputName">Nom</label>
+                      <input type="text" class="form-control" id="inputName" placeholder="Nom" pattern="^\D+$" required>
+                      <div class="valid-feedback">
+                        Tout est ok!
+                      </div>
+                      <div class="invalid-feedback">
+                        Hey, dis nous qui tu es !
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="Prénom">Prénom</label>
+                      <input type="text" class="form-control" id="inputPrenom" placeholder="Prénom" pattern="^\D+$" required>
+                      <div class="valid-feedback">
+                        Tout est ok!
+                      </div>
+                      <div class="invalid-feedback">
+                        Présente toi :) !!!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAdresse">Adresse</label>
+                  <input type="text" class="form-control" id="inputAdresse" placeholder="Adresse">
+                  <div class="valid-feedback">
+                    Partage ton adresse si tu le souhaite
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="inputPhone">Téléphone</label>
+                      <input type="text" class="form-control" id="inputPhone" placeholder="XX-XX-XX-XX-XX" pattern="^[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}$" required>
+                      <div class="valid-feedback">
+                        Tout est ok!
+                      </div>
+                      <div class="invalid-feedback">
+                        Numéro de téléphone invalid
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="inputMail">Email</label>
+                      <input type="text" class="form-control" id="inputMail" placeholder="name@example.com" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                      <div class="valid-feedback">
+                        Tout est ok!
+                      </div>
+                      <div class="invalid-feedback">
+                        Adresse mail invalid
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="massage" rows="3" required></textarea>
+                  <div class="valid-feedback">
+                    Tout est ok!
+                  </div>
+                  <div class="invalid-feedback">
+                    Un petit message cela fait toujours plaisir :)
+                  </div>
+                </div>
+                <div class="row marginDown">
+
+                </div>
+                <div class="row justify-content-center marginDown">
+                  <button id="sendMail" type="submit" class="btn btn-block">Envoyer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Horaires -->
+  <section id="horaire">
+    <div class="container-fluid padDown">
+      <div class="row justify-content-center">
+        <h2>Nos Horaires</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4" data-aos="zoom-in-left">
+          <div class="row justify-content-center">
+            <h5>Adresse</h5>
+          </div>
+          <div class="row justify-content-center">
+            <Hr></Hr>
+          </div>
+          <div class="row justify-content-center">
+            <p class="secondLine">28 rue du delandine LYON</p>
+          </div>
+          <div class="row justify-content-center">
+            <p class="thirdLine">Accueil voiturier & Parking privatif</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-down">
+          <div class="row justify-content-center">
+            <h5>Horaires</h5>
+          </div>
+          <div class="row justify-content-center">
+            <Hr></Hr>
+          </div>
+          <div class="row justify-content-center">
+            <p class="secondLine">du Mardi au Samedi</p>
+          </div>
+          <div class="row justify-content-center">
+            <p class="thirdLine">Midi & Soir</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in-right">
+          <div class="row justify-content-center">
+            <h5>Coordonnées</h5>
+          </div>
+          <div class="row justify-content-center">
+            <Hr></Hr>
+          </div>
+          <div class="row justify-content-center">
+            <p class="secondLine">Tél: 04.78.09.60.80</p>
+          </div>
+          <div class="row justify-content-center">
+            <p class="thirdLine">contact@bugcookers.fr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARE -->
+  <div id="share" class="container-fluid stickyB">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+          <div class="col">
+            <div class="row justify-content-center">
+              <div class="iconBox">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row justify-content-center">
+              <div class="iconBox">
+                <i class="fab fa-instagram"></i>
+              </div>
+            </div>
+          </div>
+            <div class="col">
+              <div class="row justify-content-center">
+                <div class="iconBox">
+                  <i class="fab fa-twitter"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container-fluid">
+        <div class="row justify-content-center marginDown">
+          <div id="TA_cdsscrollingravewide62" class="TA_cdsscrollingravewide">
+            <ul id="NxqtzM6Ux" class="TA_links XJEkrVT">
+              <li id="kfHHlzI2r7Z" class="nGhp0kDyT">
+                <a target="_blank" href="https://www.tripadvisor.fr/"><img src="https://static.tacdn.com/img2/t4b/Stacked_TA_logo.png" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="membre" class="row">
+          <div class="col-md-4 offset-md-4" data-aos="flip-left" data-aos-offset="50">
+            <div class="row">
+              <div class="col" data-aos="flip-left" data-aos-offset="50">
+                <div class="row justify-content-center">
+                  <img src="./pictures/laFourchette.png" alt="">
+                </div>
+              </div>
+              <div class="col" data-aos="flip-left" data-aos-offset="50">
+                <div class="row justify-content-center">
+                  <img src="./pictures/maitreRestaurateur.png" alt="">
+                </div>
+              </div>
+              <div class="col" data-aos="flip-right" data-aos-offset="50">
+                <div class="row justify-content-center">
+                  <img src="./pictures/toqueBlanche.jpg" alt="">
+                </div>
+              </div>
+              <div class="col" data-aos="flip-right" data-aos-offset="50">
+                <div class="row justify-content-center">
+                  <img src="./pictures/logo_mof.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <p class="marginDown"><i class="far fa-copyright"></i> www.bugcookers.fr</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery-all.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/contact.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPcBUek_U6gXHxr8Gwp7D3r3UMYaac5JI&callback=initMap">
+    </script>
+</body>
+
+</html>
